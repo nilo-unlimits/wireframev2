@@ -16,43 +16,14 @@
 
         body {
             font-family: 'Sora', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background-color: #1a1a1a;
+            background-color: #fff;
             color: #000;
             overflow-x: hidden;
-            margin: 0 auto;
-            padding: 10px 0;
+            margin: 0;
+            padding: 0;
             min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: background-color 0.3s ease;
         }
 
-        /* Light mode styles for phone app */
-        .phone-container.light-mode {
-            background: #000;
-            color: #fff;
-        }
-
-        .phone-container.light-mode .status-bar,
-        .phone-container.light-mode .header,
-        .phone-container.light-mode .bottom-nav {
-            background: #1a1a1a;
-            color: #fff;
-        }
-
-        .phone-container.light-mode .greeting {
-            color: #fff;
-        }
-
-        .phone-container.light-mode .card {
-            background: #2a2a2a;
-            color: #fff;
-        }
-
-        .phone-container.light-mode .card-title {
-            color: #fff;
-        }
 
         /* Page Header Styles */
         .page-header {
@@ -63,103 +34,144 @@
             font-weight: 600;
             color: #000;
             margin: 0;
+            margin-bottom: 12px;
         }
-
-        /* Mode Switcher */
-        .mode-switcher {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            z-index: 3000;
+        
+        .seeker-badge {
+            background: #f8f8f8;
+            border-radius: 12px;
+            padding: 12px;
             display: flex;
-            gap: 8px;
-            background: rgba(255,255,255,0.1);
-            backdrop-filter: blur(20px);
-            padding: 8px;
-            border-radius: 20px;
-            border: 1px solid rgba(255,255,255,0.2);
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 8px;
         }
-
-        .mode-btn {
-            width: 36px;
-            height: 36px;
-            border-radius: 18px;
+        
+        .seeker-icon {
+            font-size: 20px;
+            color: #000;
+        }
+        
+        .seeker-text {
+            flex: 1;
+        }
+        
+        .seeker-title {
+            font-size: 11px;
+            font-weight: 500;
+            color: #8e8e93;
+            margin-bottom: 1px;
+        }
+        
+        .seeker-type {
+            font-size: 14px;
+            font-weight: 600;
+            color: #000;
+            margin-bottom: 2px;
+        }
+        
+        .seeker-subtitle {
+            font-size: 11px;
+            color: #333;
+            opacity: 0.8;
+        }
+        
+        .seeker-cta {
+            background: rgba(0, 0, 0, 0.1);
+            color: #000;
+            font-size: 10px;
+            font-weight: 600;
+            padding: 6px 12px;
+            border-radius: 12px;
             border: none;
             cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 16px;
-            transition: all 0.3s ease;
-            background: transparent;
         }
-
-        .mode-btn.active {
-            background: rgba(255,255,255,0.3);
-            transform: scale(1.1);
-        }
-
-        .mode-btn:hover {
-            transform: scale(1.05);
-        }
-
-        /* iOS-style System Status Bar */
-        .status-bar {
-            background: #fff;
-            height: 44px;
+        
+        .consistency-bar {
+            background: #f8f8f8;
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 16px;
             display: flex;
             justify-content: space-between;
-            align-items: center;
-            padding: 0 20px;
-            font-size: 12px;
-            font-weight: 600;
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 200;
+            align-items: flex-start;
         }
-
-        .status-left {
-            font-size: 12px;
-            font-weight: 600;
+        
+        .consistency-content {
+            flex: 1;
         }
-
-        .status-right {
+        
+        .consistency-header {
             display: flex;
-            gap: 6px;
             align-items: center;
+            justify-content: space-between;
+            margin-bottom: 6px;
+        }
+        
+        .consistency-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: #000;
+        }
+        
+        .consistency-status {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+        }
+        
+        .status-dot.high {
+            background: #34C759;
+        }
+        
+        .status-dot.medium {
+            background: #FF9500;
+        }
+        
+        .status-dot.low {
+            background: #FF3B30;
+        }
+        
+        .status-text {
             font-size: 12px;
             font-weight: 600;
+            color: #34C759;
+        }
+        
+        .consistency-subtitle {
+            font-size: 12px;
+            color: #8e8e93;
+            line-height: 1.3;
+        }
+        
+        .consistency-cta {
+            background: #007AFF;
+            color: white;
+            font-size: 10px;
+            font-weight: 600;
+            padding: 6px 12px;
+            border-radius: 12px;
+            border: none;
+            cursor: pointer;
+            margin-top: 4px;
         }
 
-        .signal-icon::before {
-            content: "●●●";
-            font-size: 8px;
-            letter-spacing: 1px;
-        }
-        
-        .wifi-icon::before {
-            content: "📶";
-            font-size: 12px;
-        }
-        
-        .battery-icon::before {
-            content: "🔋";
-            font-size: 12px;
-        }
+
 
         /* Phone Container */
         .phone-container {
             background: #fff;
-            width: 360px;
-            border-radius: 12px;
-            overflow: hidden;
-            position: relative;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            width: 100%;
+            max-width: 500px;
             margin: 0 auto;
-            height: 90vh;
-            max-height: 780px;
+            min-height: 100vh;
+            position: relative;
             display: flex;
             flex-direction: column;
         }
@@ -170,7 +182,7 @@
             padding: 16px 20px;
             border-bottom: 0.5px solid #e5e5ea;
             position: absolute;
-            top: 44px;
+            top: 0;
             left: 0;
             right: 0;
             z-index: 100;
@@ -207,9 +219,11 @@
             font-size: 12px;
             font-weight: 600;
             background: #f8f8f8;
-            padding: 6px 10px;
+            padding: 8px 10px;
             border-radius: 16px;
             border: 1px solid #e5e5ea;
+            height: 32px;
+            box-sizing: border-box;
         }
 
         .lightning {
@@ -258,7 +272,7 @@
             flex: 1;
             overflow-y: auto;
             padding: 20px;
-            padding-top: 120px;
+            padding-top: 80px;
             padding-bottom: 120px;
         }
 
@@ -1331,7 +1345,7 @@
         }
 
         .health-status {
-            font-size: 14px;
+            font-size: 12px;
             font-weight: 600;
             padding: 4px 12px;
             border-radius: 12px;
@@ -1350,6 +1364,253 @@
         .health-status.low {
             background: #FFEBEE;
             color: #FF3B30;
+        }
+        
+        .consistency-motivation {
+            margin-top: 8px;
+            margin-bottom: 16px;
+        }
+        
+        .motivation-text {
+            font-size: 12px;
+            color: #8e8e93;
+            line-height: 1.3;
+        }
+        
+        /* Analytics Overlay Styles */
+        .analytics-backdrop {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease-out;
+            z-index: 999;
+        }
+        
+        .analytics-backdrop.show {
+            opacity: 1;
+            visibility: visible;
+        }
+        .analytics-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            transform: translateY(100%);
+            background: white;
+            border-radius: 20px 20px 0 0;
+            box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-out;
+            z-index: 10000;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        
+        .analytics-overlay.show {
+            transform: translateY(0);
+        }
+        
+        .analytics-content {
+            padding: 20px;
+        }
+        
+        .analytics-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid #e5e5ea;
+        }
+        
+        .analytics-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: #000;
+        }
+        
+        .analytics-close {
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: #8e8e93;
+            cursor: pointer;
+            padding: 0;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .wrapped-section {
+            background: #f8f8f8;
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 20px;
+            color: #000;
+        }
+        
+        .wrapped-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        
+        .wrapped-subtitle {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        
+        .analytics-stats {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 24px;
+            gap: 12px;
+        }
+        
+        .stat-item {
+            flex: 1;
+            text-align: center;
+            background: #f8f8f8;
+            border-radius: 12px;
+            padding: 16px 8px;
+        }
+        
+        .stat-label {
+            font-size: 11px;
+            color: #8e8e93;
+            margin-bottom: 4px;
+        }
+        
+        .stat-value {
+            font-size: 20px;
+            font-weight: 700;
+            color: #000;
+        }
+        
+        .progress-section {
+            margin-bottom: 16px;
+        }
+        
+        .progress-label {
+            font-size: 14px;
+            font-weight: 600;
+            color: #000;
+            margin-bottom: 8px;
+        }
+        
+        .fuel-bar-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .fuel-bar {
+            flex: 1;
+            height: 8px;
+            background: #f0f0f0;
+            border-radius: 4px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .fuel-fill {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            background: #34C759;
+            transition: width 0.3s ease;
+            border-radius: 4px;
+        }
+        
+        .fuel-fill.achievement {
+            background: #007AFF;
+        }
+        
+        .fuel-percentage {
+            font-size: 12px;
+            font-weight: 600;
+            color: #8e8e93;
+            min-width: 30px;
+        }
+        
+        /* New Analytics Overlay Elements */
+        .wrapped-insight {
+            background: #f8f8f8;
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 16px;
+            text-align: center;
+        }
+        
+        .insight-text {
+            font-size: 13px;
+            color: #333;
+            font-weight: 500;
+        }
+        
+        .achievement-stats {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+        
+        .achievement-box {
+            flex: 1;
+            background: #f8f8f8;
+            border-radius: 12px;
+            padding: 16px;
+            text-align: center;
+        }
+        
+        .achievement-label {
+            font-size: 11px;
+            color: #8e8e93;
+            margin-bottom: 4px;
+        }
+        
+        .achievement-value {
+            font-size: 20px;
+            font-weight: 700;
+            color: #000;
+        }
+        
+        .fuel-section {
+            margin-bottom: 16px;
+        }
+        
+        .fuel-label {
+            font-size: 14px;
+            font-weight: 600;
+            color: #000;
+            margin-bottom: 8px;
+        }
+        
+        .dream-cta {
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .dream-btn {
+            background: #007AFF;
+            color: white;
+            border: none;
+            border-radius: 24px;
+            padding: 12px 32px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        
+        .dream-btn:hover {
+            background: #0056CC;
         }
 
         .week-days {
@@ -2213,6 +2474,20 @@
             display: flex;
             align-items: center;
             gap: 12px;
+            cursor: pointer;
+            padding: 8px;
+            border-radius: 8px;
+            transition: background-color 0.2s;
+        }
+        
+        .legend-item:hover {
+            background-color: #f8f8f8;
+        }
+        
+        .legend-arrow {
+            margin-left: auto;
+            color: #8e8e93;
+            font-size: 12px;
         }
         .legend-color {
             width: 12px;
@@ -4103,15 +4378,16 @@
             color: #34C759;
         }
 
-        .overview-arrow {
-            color: #8e8e93;
-            font-size: 12px;
+        .overview-pill-btn {
+            background: #007AFF;
+            color: white;
+            font-size: 10px;
+            font-weight: 600;
+            padding: 4px 12px;
+            border-radius: 12px;
+            border: none;
+            cursor: pointer;
             margin-top: 4px;
-        }
-
-        .overview-arrow i {
-            width: 12px;
-            height: 12px;
         }
 
         .overview-card {
@@ -4326,22 +4602,8 @@
     </style>
 </head>
 <body>
-    <!-- Mode Switcher -->
-    <div class="mode-switcher">
-        <button class="mode-btn" id="lightMode" onclick="setMode('light')">☀️</button>
-        <button class="mode-btn active" id="darkMode" onclick="setMode('dark')">🌙</button>
-    </div>
 
     <div class="phone-container">
-    <!-- System Status Bar -->
-    <div class="status-bar">
-        <div class="status-left">9:41</div>
-        <div class="status-right">
-            <div class="signal-icon"></div>
-            <div class="wifi-icon"></div>
-            <div class="battery-icon"></div>
-        </div>
-    </div>
 
     <!-- Header -->
     <div class="header">
@@ -4400,7 +4662,7 @@
                         <div class="overview-number">3</div>
                         <div class="overview-label">Dreams</div>
                     </div>
-                    <div class="overview-arrow"><i data-lucide="chevron-right"></i></div>
+                    <button class="overview-pill-btn">View All</button>
                 </div>
                 
                 <div class="overview-card" onclick="showPage('challenges')">
@@ -4409,7 +4671,7 @@
                         <div class="overview-number">5</div>
                         <div class="overview-label">Challenges</div>
                     </div>
-                    <div class="overview-arrow"><i data-lucide="chevron-right"></i></div>
+                    <button class="overview-pill-btn">View All</button>
                 </div>
                 
                 <div class="overview-card" onclick="showPage('meditation')">
@@ -4418,38 +4680,10 @@
                         <div class="overview-number">12</div>
                         <div class="overview-label">Meditation</div>
                     </div>
-                    <div class="overview-arrow"><i data-lucide="chevron-right"></i></div>
+                    <button class="overview-pill-btn">View All</button>
                 </div>
             </div>
 
-            <!-- Quick Actions Global -->
-            <div class="quick-actions-section">
-                <div class="standard-header">
-                    <div class="standard-title">Quick start</div>
-                </div>
-                <div class="quick-actions-carousel">
-                    <div class="quick-action-card">
-                        <div class="quick-card-icon"><i data-lucide="gallery-horizontal"></i></div>
-                        <div class="quick-card-title">Dream Gallery</div>
-                        <div class="quick-card-subtitle">Browse dreams</div>
-                    </div>
-                    <div class="quick-action-card">
-                        <div class="quick-card-icon"><i data-lucide="sparkles"></i></div>
-                        <div class="quick-card-title">Future Self</div>
-                        <div class="quick-card-subtitle">Get guidance</div>
-                    </div>
-                    <div class="quick-action-card">
-                        <div class="quick-card-icon"><i data-lucide="activity"></i></div>
-                        <div class="quick-card-title">Quick Challenge</div>
-                        <div class="quick-card-subtitle">Join now</div>
-                    </div>
-                    <div class="quick-action-card">
-                        <div class="quick-card-icon"><i data-lucide="headphones"></i></div>
-                        <div class="quick-card-title">Meditate</div>
-                        <div class="quick-card-subtitle">5 min session</div>
-                    </div>
-                </div>
-            </div>
 
 
             <!-- Recommended for You -->
@@ -4562,11 +4796,22 @@
                 <h1 class="page-title">Dreams</h1>
             </div>
 
+            <!-- Seeker Badge -->
+            <div class="seeker-badge">
+                <div class="seeker-icon"><i data-lucide="compass"></i></div>
+                <div class="seeker-text">
+                    <div class="seeker-title">Your Dream Personality</div>
+                    <div class="seeker-type">The Seeker</div>
+                    <div class="seeker-subtitle">Chasing clarity, truth, and your own version of more</div>
+                </div>
+                <button class="seeker-cta">Rediscover</button>
+            </div>
+
             <!-- Dream Health Weekly View -->
             <div class="dream-health-section">
                 <div class="health-header">
-                    <div class="standard-title">Dream Health</div>
-                    <div class="health-status high">High</div>
+                    <div class="standard-title">Consistency</div>
+                    <div class="health-status medium">Medium</div>
                 </div>
                 <div class="health-weekly">
                     <div class="week-days">
@@ -4607,42 +4852,35 @@
                         </div>
                     </div>
                 </div>
+                <div class="consistency-motivation">
+                    <div class="motivation-text">Consistency builds the foundation for achieving your deepest aspirations</div>
+                </div>
             </div>
 
             <!-- Health Factor Cards -->
             <div class="health-factors">
-                <div class="factor-card">
-                    <div class="factor-card-value">92%</div>
-                    <div class="factor-card-name">Momentum</div>
-                    <div class="factor-card-subtitle">Keep your streak alive by working towards bigger goals</div>
-                </div>
-                <div class="factor-card">
-                    <div class="factor-card-value">85%</div>
-                    <div class="factor-card-name">Consistency</div>
-                    <div class="factor-card-subtitle">Consistency is completing daily scheduled tasks</div>
-                </div>
             </div>
 
             <!-- Quick Actions (Horizontal Swipable Cards) -->
             <div class="quick-actions-section">
                 <div class="standard-header">
-                    <div class="standard-title">Quick actions</div>
+                    <div class="standard-title">For The Seeker</div>
                 </div>
                 <div class="quick-actions-carousel">
                     <div class="quick-action-card">
                         <div class="quick-card-icon"><i data-lucide="gallery-horizontal"></i></div>
-                        <div class="quick-card-title">Browse Dream Gallery</div>
-                        <div class="quick-card-subtitle">Explore dreams</div>
+                        <div class="quick-card-title">Find Hidden Patterns</div>
+                        <div class="quick-card-subtitle">Browse Dream Gallery</div>
                     </div>
                     <div class="quick-action-card">
                         <div class="quick-card-icon"><i data-lucide="list-checks"></i></div>
-                        <div class="quick-card-title">Browse Today's Tasks</div>
-                        <div class="quick-card-subtitle">See what's due</div>
+                        <div class="quick-card-title">Question Everything</div>
+                        <div class="quick-card-subtitle">Browse Today's Tasks</div>
                     </div>
                     <div class="quick-action-card">
                         <div class="quick-card-icon"><i data-lucide="sparkles"></i></div>
-                        <div class="quick-card-title">Speak To Future Self</div>
-                        <div class="quick-card-subtitle">Get guidance</div>
+                        <div class="quick-card-title">Discover What Matters</div>
+                        <div class="quick-card-subtitle">Speak To Future Self</div>
                     </div>
                 </div>
             </div>
@@ -4681,38 +4919,42 @@
                         </div>
                     </div>
                     <div class="donut-legend">
-                        <div class="legend-item">
+                        <div class="legend-item clickable" onclick="showCategoryAnalytics('work')">
                             <div class="legend-color work"></div>
                             <div class="legend-text">
                                 <div class="legend-name">Work</div>
-                                <div class="legend-count">12 dreams</div>
+                                <div class="legend-count"><strong>12</strong></div>
                             </div>
+                            <div class="legend-arrow"><i data-lucide="chevron-right"></i></div>
                         </div>
-                        <div class="legend-item">
+                        <div class="legend-item clickable" onclick="showCategoryAnalytics('play')">
                             <div class="legend-color play"></div>
                             <div class="legend-text">
                                 <div class="legend-name">Play</div>
-                                <div class="legend-count">4 dreams</div>
+                                <div class="legend-count"><strong>4</strong></div>
                             </div>
+                            <div class="legend-arrow"><i data-lucide="chevron-right"></i></div>
                         </div>
-                        <div class="legend-item">
+                        <div class="legend-item clickable" onclick="showCategoryAnalytics('love')">
                             <div class="legend-color love"></div>
                             <div class="legend-text">
                                 <div class="legend-name">Love</div>
-                                <div class="legend-count">6 dreams</div>
+                                <div class="legend-count"><strong>6</strong></div>
                             </div>
+                            <div class="legend-arrow"><i data-lucide="chevron-right"></i></div>
                         </div>
-                        <div class="legend-item">
+                        <div class="legend-item clickable" onclick="showCategoryAnalytics('self')">
                             <div class="legend-color self"></div>
                             <div class="legend-text">
                                 <div class="legend-name">Self</div>
-                                <div class="legend-count">0 dreams</div>
+                                <div class="legend-count"><strong>0</strong></div>
                             </div>
+                            <div class="legend-arrow"><i data-lucide="chevron-right"></i></div>
                         </div>
                     </div>
                 </div>
                 
-                <div class="category-grid">
+                <div class="category-grid" id="categoryGrid">
                     <div class="category-card work">
                         <div class="category-content">
                             <div class="category-icon-top"><i data-lucide="briefcase"></i></div>
@@ -4844,6 +5086,52 @@
                     <div class="message-actions">
                         <div class="message-btn-primary">Continue streak</div>
                         <div class="message-btn-secondary">Ask Future Self</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Category Analytics Overlay -->
+        <div class="analytics-backdrop" id="analyticsBackdrop" onclick="hideAnalytics()"></div>
+        <div class="analytics-overlay" id="analyticsOverlay">
+            <div class="analytics-content">
+                <div class="analytics-header">
+                    <div class="analytics-title" id="analyticsTitle">Your Work Dreams</div>
+                    <button class="analytics-close" onclick="hideAnalytics()">×</button>
+                </div>
+                
+                <div class="analytics-body">
+                    <!-- Spotify Wrapped Style Insight -->
+                    <div class="wrapped-insight" id="wrappedInsight">
+                        <div class="insight-text">You're most productive with work dreams on Tuesdays</div>
+                    </div>
+                    
+                    <!-- Manifested/Achieved Stats -->
+                    <div class="achievement-stats">
+                        <div class="achievement-box">
+                            <div class="achievement-label">Manifested</div>
+                            <div class="achievement-value" id="manifestedCount">8</div>
+                        </div>
+                        <div class="achievement-box">
+                            <div class="achievement-label">Achieved</div>
+                            <div class="achievement-value" id="achievedCount">4</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Single Fuel Bar -->
+                    <div class="fuel-section">
+                        <div class="fuel-label">Overall Progress</div>
+                        <div class="fuel-bar-container">
+                            <div class="fuel-bar">
+                                <div class="fuel-fill" id="overallFill" style="width: 67%"></div>
+                            </div>
+                            <div class="fuel-percentage" id="overallPercent">67%</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Dream Button -->
+                    <div class="dream-cta">
+                        <button class="dream-btn" onclick="hideAnalytics(); showPage('dreams');">Dream</button>
                     </div>
                 </div>
             </div>
@@ -5527,20 +5815,78 @@
             }
         });
 
-        // Mode Switcher Functions
-        function setMode(mode) {
-            const phoneContainer = document.querySelector('.phone-container');
-            const lightBtn = document.getElementById('lightMode');
-            const darkBtn = document.getElementById('darkMode');
+        
+        // Analytics overlay functions
+        function showCategoryAnalytics(category) {
+            const overlay = document.getElementById('analyticsOverlay');
+            const backdrop = document.getElementById('analyticsBackdrop');
+            const categoryGrid = document.getElementById('categoryGrid');
+            const title = document.getElementById('analyticsTitle');
+            const insight = document.getElementById('wrappedInsight').querySelector('.insight-text');
+            const manifestedCount = document.getElementById('manifestedCount');
+            const achievedCount = document.getElementById('achievedCount');
+            const overallFill = document.getElementById('overallFill');
+            const overallPercent = document.getElementById('overallPercent');
             
-            if (mode === 'dark') {
-                phoneContainer.classList.add('light-mode');
-                darkBtn.classList.add('active');
-                lightBtn.classList.remove('active');
-            } else {
-                phoneContainer.classList.remove('light-mode');
-                lightBtn.classList.add('active');
-                darkBtn.classList.remove('active');
+            // Category-specific data
+            const categoryData = {
+                work: {
+                    title: 'Your Work Dreams',
+                    insight: "You browsed 12 work dreams this week, most viewed on Tuesday mornings",
+                    manifested: 8,
+                    achieved: 4,
+                    progress: 67
+                },
+                play: {
+                    title: 'Your Play Dreams',
+                    insight: "Adventure dreams were your top choice, with 3 new ones explored this week",
+                    manifested: 3,
+                    achieved: 2,
+                    progress: 75
+                },
+                love: {
+                    title: 'Your Love Dreams',
+                    insight: "You spent 15 minutes exploring relationship goals on Sunday evening",
+                    manifested: 4,
+                    achieved: 2,
+                    progress: 50
+                },
+                self: {
+                    title: 'Your Self Dreams',
+                    insight: "Something awaits - start exploring personal growth dreams to unlock your potential",
+                    manifested: 0,
+                    achieved: 0,
+                    progress: 0
+                }
+            };
+            
+            const data = categoryData[category];
+            
+            // Update content
+            title.textContent = data.title;
+            insight.textContent = data.insight;
+            manifestedCount.textContent = data.manifested;
+            achievedCount.textContent = data.achieved;
+            overallFill.style.width = data.progress + '%';
+            overallPercent.textContent = data.progress + '%';
+            
+            // Hide category grid and show overlay
+            if (categoryGrid) {
+                categoryGrid.style.display = 'none';
+            }
+            backdrop.classList.add('show');
+            overlay.classList.add('show');
+        }
+        
+        function hideAnalytics() {
+            const overlay = document.getElementById('analyticsOverlay');
+            const backdrop = document.getElementById('analyticsBackdrop');
+            const categoryGrid = document.getElementById('categoryGrid');
+            
+            overlay.classList.remove('show');
+            backdrop.classList.remove('show');
+            if (categoryGrid) {
+                categoryGrid.style.display = 'grid';
             }
         }
     </script>
