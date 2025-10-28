@@ -664,8 +664,6 @@
             bottom: 100px;
             left: 50%;
             transform: translateX(-50%);
-            max-width: 500px;
-            margin-left: -250px;
             z-index: 2000;
             cursor: pointer;
             box-shadow: 0 12px 40px rgba(0,0,0,0.15), inset 0 2px 0 rgba(255,255,255,0.4);
@@ -985,6 +983,45 @@
         .main-ring {
             position: relative;
             flex-shrink: 0;
+        }
+
+        .rings-section {
+            margin-bottom: 24px;
+        }
+
+        .rings-details {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .ring-detail {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .ring-color {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+
+        .ring-text {
+            flex: 1;
+        }
+
+        .ring-name {
+            font-size: 14px;
+            font-weight: 600;
+            color: #000;
+            margin-bottom: 2px;
+        }
+
+        .ring-value {
+            font-size: 12px;
+            color: #8e8e93;
         }
 
         .ring-center {
@@ -4681,6 +4718,56 @@
             </div>
 
 
+
+            <!-- Apple Health-style Rings -->
+            <div class="rings-section">
+                <div class="rings-header">
+                    <div class="rings-title">Your Progress</div>
+                    <div class="rings-subtitle">Dream • Manifest • Achieve</div>
+                </div>
+                <div class="rings-container">
+                    <div class="main-ring">
+                        <!-- Dream Ring (Outer) -->
+                        <svg width="120" height="120" class="ring-svg">
+                            <circle cx="60" cy="60" r="52" fill="none" stroke="#e5e5ea" stroke-width="8"/>
+                            <circle cx="60" cy="60" r="52" fill="none" stroke="#007AFF" stroke-width="8" stroke-linecap="round" stroke-dasharray="327" stroke-dashoffset="98" transform="rotate(-90 60 60)"/>
+                        </svg>
+                        <!-- Manifest Ring (Middle) -->
+                        <svg width="120" height="120" class="ring-svg" style="position: absolute; top: 0; left: 0;">
+                            <circle cx="60" cy="60" r="42" fill="none" stroke="#e5e5ea" stroke-width="8"/>
+                            <circle cx="60" cy="60" r="42" fill="none" stroke="#34C759" stroke-width="8" stroke-linecap="round" stroke-dasharray="264" stroke-dashoffset="132" transform="rotate(-90 60 60)"/>
+                        </svg>
+                        <!-- Achieve Ring (Inner) -->
+                        <svg width="120" height="120" class="ring-svg" style="position: absolute; top: 0; left: 0;">
+                            <circle cx="60" cy="60" r="32" fill="none" stroke="#e5e5ea" stroke-width="8"/>
+                            <circle cx="60" cy="60" r="32" fill="none" stroke="#FF3B30" stroke-width="8" stroke-linecap="round" stroke-dasharray="201" stroke-dashoffset="60" transform="rotate(-90 60 60)"/>
+                        </svg>
+                    </div>
+                    <div class="rings-details">
+                        <div class="ring-detail">
+                            <div class="ring-color" style="background: #007AFF;"></div>
+                            <div class="ring-text">
+                                <div class="ring-name">Dream</div>
+                                <div class="ring-value">12 of 15</div>
+                            </div>
+                        </div>
+                        <div class="ring-detail">
+                            <div class="ring-color" style="background: #34C759;"></div>
+                            <div class="ring-text">
+                                <div class="ring-name">Manifest</div>
+                                <div class="ring-value">8 of 12</div>
+                            </div>
+                        </div>
+                        <div class="ring-detail">
+                            <div class="ring-color" style="background: #FF3B30;"></div>
+                            <div class="ring-text">
+                                <div class="ring-name">Achieve</div>
+                                <div class="ring-value">5 of 8</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <!-- Recommended for You -->
             <div class="recent-activity">
