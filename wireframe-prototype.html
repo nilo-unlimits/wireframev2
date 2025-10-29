@@ -207,6 +207,7 @@
         }
         
         .today-btn {
+            position: relative;
             display: flex;
             align-items: center;
             gap: 8px;
@@ -227,7 +228,6 @@
         }
         
         .today-icon {
-            position: relative;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -242,13 +242,13 @@
         
         .red-dot {
             position: absolute;
-            top: -2px;
-            right: -2px;
-            width: 6px;
-            height: 6px;
+            top: -3px;
+            right: -3px;
+            width: 8px;
+            height: 8px;
             background: #FF3B30;
             border-radius: 50%;
-            border: 1px solid #fff;
+            border: 2px solid #fff;
         }
 
         .header-stats {
@@ -4651,9 +4651,9 @@
                 <button class="today-btn">
                     <div class="today-icon">
                         <i data-lucide="list-checks"></i>
-                        <div class="red-dot"></div>
                     </div>
                     <span>Today</span>
+                    <div class="red-dot"></div>
                 </button>
             </div>
             <div class="header-stats">
