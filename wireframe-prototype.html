@@ -761,8 +761,8 @@
 
         .progress-number,
         .streak-number {
-            font-size: 32px;
-            font-weight: 700;
+            font-size: 10px;
+            font-weight: 600;
             color: #000;
             margin-bottom: 4px;
         }
@@ -3663,6 +3663,142 @@
             color: #000;
         }
 
+        /* Morning Message */
+        .morning-message {
+            font-size: 14px;
+            font-weight: 400;
+            color: #000;
+            text-align: left;
+            margin: 20px 0;
+            padding: 16px 20px;
+            line-height: 1.4;
+        }
+        
+        /* Discovery Message */
+        .discovery-message-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 20px 0;
+            padding: 16px 20px;
+        }
+        
+        .discovery-message {
+            font-size: 14px;
+            font-weight: 700;
+            color: #000;
+            line-height: 1.4;
+            flex: 1;
+        }
+        
+        .tell-me-more-btn {
+            background: #f8f8f8;
+            border: 1px solid #e5e5ea;
+            border-radius: 20px;
+            padding: 8px 12px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .tell-me-more-btn:hover {
+            background: #f0f0f0;
+            transform: translateY(-1px);
+        }
+        
+        .tell-me-more-btn i {
+            width: 16px;
+            height: 16px;
+            color: #007AFF;
+        }
+        
+        .tell-me-more-btn span {
+            font-size: 12px;
+            font-weight: 600;
+            color: #000;
+        }
+        
+        /* Breathing Message */
+        .breathing-message {
+            font-size: 14px;
+            font-weight: 400;
+            color: #000;
+            text-align: left;
+            margin: 20px 0;
+            padding: 16px 20px;
+            line-height: 1.4;
+        }
+        
+        /* Life Direction Message */
+        .life-direction-message {
+            font-size: 14px;
+            font-weight: 400;
+            color: #000;
+            text-align: left;
+            margin: 20px 0;
+            padding: 16px 20px;
+            line-height: 1.4;
+        }
+        
+        /* Task Checklist */
+        .task-checklist-section {
+            margin: 24px 0;
+            padding: 16px 20px;
+        }
+        
+        .task-checklist-header {
+            font-size: 14px;
+            font-weight: 700;
+            color: #000;
+            margin-bottom: 16px;
+        }
+        
+        .task-checklist {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .task-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+        
+        .task-checkbox {
+            width: 18px;
+            height: 18px;
+            border-radius: 4px;
+            border: 2px solid #e5e5ea;
+            cursor: pointer;
+            margin-top: 2px;
+        }
+        
+        .task-checkbox:checked {
+            background: #007AFF;
+            border-color: #007AFF;
+        }
+        
+        .task-content {
+            flex: 1;
+            cursor: pointer;
+        }
+        
+        .task-name {
+            font-size: 14px;
+            font-weight: 500;
+            color: #000;
+            margin-bottom: 2px;
+        }
+        
+        .task-category {
+            font-size: 12px;
+            color: #8e8e93;
+            font-weight: 400;
+        }
+        
         /* Gamified Leaderboard Banner */
         .leaderboard-banner {
             background: #f8f8f8;
@@ -3695,7 +3831,7 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            font-size: 8px;
+            font-size: 12px;
             font-weight: 700;
             color: #000;
             line-height: 1;
@@ -3763,6 +3899,20 @@
             background: #007AFF;
             border-radius: 2px;
             transition: width 0.3s ease;
+        }
+        
+        .progress-numbers-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+        
+        .progress-labels-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 8px;
         }
         
         .progress-numbers {
@@ -4424,11 +4574,18 @@
             height: 20px;
         }
 
-        .overview-number {
-            font-size: 20px;
+        .overview-donut {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 8px;
+        }
+        .donut-number {
+            position: absolute;
+            font-size: 12px;
             font-weight: 700;
             color: #000;
-            margin-bottom: 2px;
         }
 
         .overview-label {
@@ -4688,66 +4845,41 @@
     <div class="main-content">
         <!-- Home Dashboard: Overall Analytics -->
         <div class="page active" id="home">
+            <!-- Morning Message -->
+            <div class="morning-message">
+                Morning Sid. Every version of you that hesitated, dreamed, or tried — they all led here.
+            </div>
             <!-- Gamified Leaderboard Banner -->
             <div class="leaderboard-banner">
                 <div class="banner-header">
                     <div class="rank-indicator">
                         <div class="mini-level-chart">
-                            <svg width="40" height="40" viewBox="0 0 40 40">
-                                <circle cx="20" cy="20" r="16" fill="none" stroke="#f0f0f0" stroke-width="3"/>
-                                <circle cx="20" cy="20" r="16" fill="none" stroke="#34C759" stroke-width="3" 
-                                        stroke-dasharray="100.5" stroke-dashoffset="20.1" 
-                                        stroke-linecap="round" transform="rotate(-90 20 20)"/>
+                            <svg width="80" height="80" viewBox="0 0 80 80">
+                                <circle cx="40" cy="40" r="32" fill="none" stroke="#f0f0f0" stroke-width="6"/>
+                                <circle cx="40" cy="40" r="32" fill="none" stroke="#34C759" stroke-width="6" 
+                                        stroke-dasharray="201" stroke-dashoffset="40.2" 
+                                        stroke-linecap="round" transform="rotate(-90 40 40)"/>
                             </svg>
                             <div class="mini-level-text">LVL 2</div>
                         </div>
-                        <div class="rank-label">Visionary</div>
                     </div>
                     <div class="rank-progress">
-                        <div class="points-display">
-                            <div class="points-left">450 pts</div>
-                            <div class="points-needed">500 pts</div>
+                        <div class="progress-numbers-row">
+                            <div class="progress-number">100</div>
+                            <div class="progress-number">500</div>
                         </div>
                         <div class="progress-bar-container">
                             <div class="rank-progress-bar">
                                 <div class="rank-progress-fill" style="width: 90%"></div>
                             </div>
                         </div>
+                        <div class="progress-labels-row">
+                            <div class="progress-text">Visionary</div>
+                            <div class="progress-text">Inspirer</div>
+                        </div>
                     </div>
                 </div>
                 
-                <div class="top-friends">
-                    <div class="friends-header">
-                        <div class="friends-label">Top Friends</div>
-                        <div class="view-leaderboard-btn">View Leaderboard</div>
-                    </div>
-                    <div class="friend-avatars">
-                        <div class="friend-rank-item">
-                            <div class="friend-avatar small">SA</div>
-                            <div class="friend-rank-info">
-                                <div class="friend-rank">#1</div>
-                                <div class="friend-name">Sajith</div>
-                                <div class="friend-points">1200 pts</div>
-                            </div>
-                        </div>
-                        <div class="friend-rank-item">
-                            <div class="friend-avatar small">JD</div>
-                            <div class="friend-rank-info">
-                                <div class="friend-rank">#2</div>
-                                <div class="friend-name">John</div>
-                                <div class="friend-points">980 pts</div>
-                            </div>
-                        </div>
-                        <div class="friend-rank-item">
-                            <div class="friend-avatar small">MY</div>
-                            <div class="friend-rank-info">
-                                <div class="friend-rank">#3</div>
-                                <div class="friend-name">Yasir</div>
-                                <div class="friend-points">750 pts</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
                 <div class="banner-actions">
                     <div class="action-btn">
@@ -4764,73 +4896,99 @@
                     </div>
                 </div>
             </div>
-            <!-- Overall Life Health with Central Donut -->
-            <div class="dream-level-section">
-                <div class="vitality-score-center">
-                    <svg width="140" height="140" viewBox="0 0 140 140">
-                        <circle cx="70" cy="70" r="60" fill="none" stroke="#f0f0f0" stroke-width="8"/>
-                        <circle cx="70" cy="70" r="60" fill="none" stroke="#34C759" stroke-width="8" 
-                                stroke-dasharray="377" stroke-dashoffset="75.4" 
-                                stroke-linecap="round" transform="rotate(-90 70 70)"/>
-                    </svg>
-                    <div class="vitality-number">LVL 2</div>
+            <!-- Discovery Message -->
+            <div class="discovery-message-container">
+                <div class="discovery-message">
+                    I'm proud of how far you've come.
                 </div>
-                
-                <div class="level-header">
-                    <div class="level-title">Visionary</div>
-                </div>
-                <div class="level-progress">
-                    <div class="level-current">Visionary</div>
-                    <div class="level-bar">
-                        <div class="level-fill" style="width: 84%"></div>
-                    </div>
-                    <div class="level-next">Inspirer</div>
-                </div>
-            </div>
-
-            <!-- This Month -->
-            <div class="standard-header">
-                <div class="standard-title">This Month</div>
+                <button class="tell-me-more-btn">
+                    <i data-lucide="bar-chart-3"></i>
+                    <span>Tell Me More</span>
+                </button>
             </div>
             
             <div class="overview-cards">
                 <div class="overview-card" onclick="showPage('dreams')">
-                    <div class="overview-icon"><i data-lucide="star"></i></div>
+                    <div class="overview-donut">
+                        <svg width="60" height="60" viewBox="0 0 60 60">
+                            <circle cx="30" cy="30" r="24" fill="none" stroke="#f0f0f0" stroke-width="6"/>
+                            <circle cx="30" cy="30" r="24" fill="none" stroke="#FF6B6B" stroke-width="6" 
+                                    stroke-dasharray="150.8" stroke-dashoffset="105.56" 
+                                    stroke-linecap="round" transform="rotate(-90 30 30)"/>
+                        </svg>
+                        <div class="donut-number">3/10</div>
+                    </div>
                     <div class="overview-stats">
-                        <div class="overview-number">3</div>
                         <div class="overview-label">Dreams</div>
                     </div>
                     <button class="overview-pill-btn">View All</button>
                 </div>
                 
                 <div class="overview-card" onclick="showPage('challenges')">
-                    <div class="overview-icon"><i data-lucide="trophy"></i></div>
+                    <div class="overview-donut">
+                        <svg width="60" height="60" viewBox="0 0 60 60">
+                            <circle cx="30" cy="30" r="24" fill="none" stroke="#f0f0f0" stroke-width="6"/>
+                            <circle cx="30" cy="30" r="24" fill="none" stroke="#4ECDC4" stroke-width="6" 
+                                    stroke-dasharray="150.8" stroke-dashoffset="75.4" 
+                                    stroke-linecap="round" transform="rotate(-90 30 30)"/>
+                        </svg>
+                        <div class="donut-number">5/8</div>
+                    </div>
                     <div class="overview-stats">
-                        <div class="overview-number">5</div>
                         <div class="overview-label">Challenges</div>
                     </div>
                     <button class="overview-pill-btn">View All</button>
                 </div>
                 
                 <div class="overview-card" onclick="showPage('meditation')">
-                    <div class="overview-icon"><i data-lucide="headphones"></i></div>
+                    <div class="overview-donut">
+                        <svg width="60" height="60" viewBox="0 0 60 60">
+                            <circle cx="30" cy="30" r="24" fill="none" stroke="#f0f0f0" stroke-width="6"/>
+                            <circle cx="30" cy="30" r="24" fill="none" stroke="#FFD93D" stroke-width="6" 
+                                    stroke-dasharray="150.8" stroke-dashoffset="25.13" 
+                                    stroke-linecap="round" transform="rotate(-90 30 30)"/>
+                        </svg>
+                        <div class="donut-number">12/15</div>
+                    </div>
                     <div class="overview-stats">
-                        <div class="overview-number">12</div>
                         <div class="overview-label">Meditation</div>
                     </div>
                     <button class="overview-pill-btn">View All</button>
                 </div>
             </div>
 
+            <!-- Breathing Message -->
+            <div class="breathing-message">
+                Take a breath. I'm here to help you see where you're headed, and how to meet me there.
+            </div>
 
-
-            <!-- Recommended for You -->
-            <div class="recent-activity">
-                <div class="standard-header">
-                    <div class="standard-title">Recommended for you</div>
+            <!-- Quick Actions (Horizontal Swipable Cards) -->
+            <div class="quick-actions-section">
+                <div class="quick-actions-carousel">
+                    <div class="quick-action-card">
+                        <div class="quick-card-icon"><i data-lucide="gallery-horizontal"></i></div>
+                        <div class="quick-card-title">Find Hidden Patterns</div>
+                        <div class="quick-card-subtitle">Browse Dream Gallery</div>
+                    </div>
+                    <div class="quick-action-card">
+                        <div class="quick-card-icon"><i data-lucide="list-checks"></i></div>
+                        <div class="quick-card-title">Question Everything</div>
+                        <div class="quick-card-subtitle">Browse Today's Tasks</div>
+                    </div>
+                    <div class="quick-action-card">
+                        <div class="quick-card-icon"><i data-lucide="sparkles"></i></div>
+                        <div class="quick-card-title">Discover What Matters</div>
+                        <div class="quick-card-subtitle">Speak To Future Self</div>
+                    </div>
                 </div>
-                
-                <div class="activity-list">
+            </div>
+
+            <!-- Life Direction -->
+            <div class="life-direction-message">
+                Let's build towards living a life with no regrets. Pick one from the steps below that feels right.
+            </div>
+            
+            <div class="activity-list">
                     <div class="activity-item">
                         <div class="activity-image-placeholder"></div>
                         <div class="activity-content">
@@ -4853,6 +5011,40 @@
                             <div class="activity-text">Master mindfulness and reshape your reality</div>
                         </div>
                         <div class="activity-arrow"><i data-lucide="chevron-right"></i></div>
+                    </div>
+                </div>
+                
+            <!-- Task Checklist -->
+            <div class="task-checklist-section">
+                <div class="task-checklist-header">Today isn't about doing more.<br>It's about doing what matters.<br>These are the few things that move you forward.</div>
+                <div class="task-checklist">
+                    <div class="task-item">
+                        <input type="checkbox" class="task-checkbox" id="task1">
+                        <label for="task1" class="task-content">
+                            <div class="task-name">Morning meditation</div>
+                            <div class="task-category">Mindfulness</div>
+                        </label>
+                    </div>
+                    <div class="task-item">
+                        <input type="checkbox" class="task-checkbox" id="task2">
+                        <label for="task2" class="task-content">
+                            <div class="task-name">Review photography portfolio</div>
+                            <div class="task-category">Creative</div>
+                        </label>
+                    </div>
+                    <div class="task-item">
+                        <input type="checkbox" class="task-checkbox" id="task3">
+                        <label for="task3" class="task-content">
+                            <div class="task-name">Plan weekend goals</div>
+                            <div class="task-category">Planning</div>
+                        </label>
+                    </div>
+                    <div class="task-item">
+                        <input type="checkbox" class="task-checkbox" id="task4">
+                        <label for="task4" class="task-content">
+                            <div class="task-name">Call future self</div>
+                            <div class="task-category">Reflection</div>
+                        </label>
                     </div>
                 </div>
             </div>
@@ -5177,38 +5369,6 @@
                     </div>
                 </div>
                 
-                <div class="top-friends">
-                    <div class="friends-header">
-                        <div class="friends-label">Top Friends</div>
-                        <div class="view-leaderboard-btn">View Leaderboard</div>
-                    </div>
-                    <div class="friend-avatars">
-                        <div class="friend-rank-item">
-                            <div class="friend-avatar small">SA</div>
-                            <div class="friend-rank-info">
-                                <div class="friend-rank">#1</div>
-                                <div class="friend-name">Sajith</div>
-                                <div class="friend-points">1200 pts</div>
-                            </div>
-                        </div>
-                        <div class="friend-rank-item">
-                            <div class="friend-avatar small">JD</div>
-                            <div class="friend-rank-info">
-                                <div class="friend-rank">#2</div>
-                                <div class="friend-name">John</div>
-                                <div class="friend-points">980 pts</div>
-                            </div>
-                        </div>
-                        <div class="friend-rank-item">
-                            <div class="friend-avatar small">MY</div>
-                            <div class="friend-rank-info">
-                                <div class="friend-rank">#3</div>
-                                <div class="friend-name">Yasir</div>
-                                <div class="friend-points">750 pts</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
                 <div class="banner-actions">
                     <div class="action-btn">
