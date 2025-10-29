@@ -242,10 +242,10 @@
         
         .red-dot {
             position: absolute;
-            top: -3px;
-            right: -3px;
-            width: 8px;
-            height: 8px;
+            top: -6px;
+            right: -6px;
+            width: 16px;
+            height: 16px;
             background: #FF3B30;
             border-radius: 50%;
             border: 2px solid #fff;
@@ -3684,6 +3684,23 @@
             text-align: center;
         }
         
+        .mini-level-chart {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 4px;
+        }
+        
+        .mini-level-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 8px;
+            font-weight: 700;
+            color: #000;
+            line-height: 1;
+        }
+        
         .rank-number {
             font-size: 32px;
             font-weight: 700;
@@ -4675,8 +4692,16 @@
             <div class="leaderboard-banner">
                 <div class="banner-header">
                     <div class="rank-indicator">
-                        <div class="rank-number">#11</div>
-                        <div class="rank-label">Your Rank</div>
+                        <div class="mini-level-chart">
+                            <svg width="40" height="40" viewBox="0 0 40 40">
+                                <circle cx="20" cy="20" r="16" fill="none" stroke="#f0f0f0" stroke-width="3"/>
+                                <circle cx="20" cy="20" r="16" fill="none" stroke="#34C759" stroke-width="3" 
+                                        stroke-dasharray="100.5" stroke-dashoffset="20.1" 
+                                        stroke-linecap="round" transform="rotate(-90 20 20)"/>
+                            </svg>
+                            <div class="mini-level-text">LVL 2</div>
+                        </div>
+                        <div class="rank-label">Visionary</div>
                     </div>
                     <div class="rank-progress">
                         <div class="points-display">
