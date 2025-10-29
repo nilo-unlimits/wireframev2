@@ -3628,6 +3628,82 @@
             color: #000;
         }
         
+        /* Merged Rank & Leaderboard Section */
+        .rank-leaderboard-section {
+            background: #f8f8f8;
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 24px;
+        }
+        
+        .user-rank-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #e5e5ea;
+        }
+        
+        .rank-status {
+            flex: 1;
+        }
+        
+        .rank-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #000;
+            margin-bottom: 4px;
+        }
+        
+        .rank-subtitle {
+            font-size: 14px;
+            color: #8e8e93;
+        }
+        
+        .current-points {
+            font-size: 16px;
+            font-weight: 600;
+            color: #007AFF;
+        }
+        
+        .user-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #007AFF;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: 600;
+        }
+        
+        .user-info {
+            flex: 1;
+        }
+        
+        .user-name {
+            font-size: 14px;
+            font-weight: 600;
+            color: #000;
+            margin-bottom: 2px;
+        }
+        
+        .user-points {
+            font-size: 12px;
+            color: #8e8e93;
+        }
+        
+        .rank-number {
+            width: 24px;
+            text-align: center;
+            font-size: 14px;
+            font-weight: 600;
+            color: #8e8e93;
+        }
+        
         .banner-header {
             display: flex;
             justify-content: space-between;
@@ -4620,29 +4696,6 @@
     <div class="main-content">
         <!-- Home Dashboard: Overall Analytics -->
         <div class="page active" id="home">
-            <!-- Overall Life Health with Central Donut -->
-            <div class="dream-level-section">
-                <div class="vitality-score-center">
-                    <svg width="140" height="140" viewBox="0 0 140 140">
-                        <circle cx="70" cy="70" r="60" fill="none" stroke="#f0f0f0" stroke-width="8"/>
-                        <circle cx="70" cy="70" r="60" fill="none" stroke="#34C759" stroke-width="8" 
-                                stroke-dasharray="377" stroke-dashoffset="75.4" 
-                                stroke-linecap="round" transform="rotate(-90 70 70)"/>
-                    </svg>
-                    <div class="vitality-number">LVL 2</div>
-                </div>
-                
-                <div class="level-header">
-                    <div class="level-title">Visionary</div>
-                </div>
-                <div class="level-progress">
-                    <div class="level-current">Visionary</div>
-                    <div class="level-bar">
-                        <div class="level-fill" style="width: 84%"></div>
-                    </div>
-                    <div class="level-next">Inspirer</div>
-                </div>
-            </div>
 
             <!-- This Month -->
             <div class="standard-header">
@@ -4713,55 +4766,49 @@
                 </div>
             </div>
 
-            <!-- Gamified Leaderboard Banner -->
-            <div class="leaderboard-banner">
-                <div class="banner-header">
-                    <div class="rank-indicator">
-                        <div class="rank-number">#11</div>
-                        <div class="rank-label">Your Rank</div>
+            <!-- Merged Rank & Leaderboard Section -->
+            <div class="rank-leaderboard-section">
+                <div class="user-rank-header">
+                    <div class="rank-status">
+                        <div class="rank-title">VISIONARY</div>
+                        <div class="rank-subtitle">Rank #11 • 450 pts to Inspirer</div>
                     </div>
-                    <div class="rank-progress">
-                        <div class="points-display">
-                            <div class="points-left">450 pts</div>
-                            <div class="points-needed">500 pts</div>
-                        </div>
-                        <div class="progress-bar-container">
-                            <div class="rank-progress-bar">
-                                <div class="rank-progress-fill" style="width: 90%"></div>
-                            </div>
-                        </div>
+                    <div class="points-display">
+                        <div class="current-points">450 pts</div>
                     </div>
                 </div>
                 
-                <div class="top-friends">
-                    <div class="friends-header">
-                        <div class="friends-label">Top Friends</div>
-                        <div class="view-leaderboard-btn">View Leaderboard</div>
+                <div class="leaderboard-list">
+                    <div class="leaderboard-item">
+                        <div class="rank-number">1</div>
+                        <div class="user-avatar">SA</div>
+                        <div class="user-info">
+                            <div class="user-name">Sajith</div>
+                            <div class="user-points">1200 pts</div>
+                        </div>
                     </div>
-                    <div class="friend-avatars">
-                        <div class="friend-rank-item">
-                            <div class="friend-avatar small">SA</div>
-                            <div class="friend-rank-info">
-                                <div class="friend-rank">#1</div>
-                                <div class="friend-name">Sajith</div>
-                                <div class="friend-points">1200 pts</div>
-                            </div>
+                    <div class="leaderboard-item">
+                        <div class="rank-number">2</div>
+                        <div class="user-avatar">JD</div>
+                        <div class="user-info">
+                            <div class="user-name">John</div>
+                            <div class="user-points">980 pts</div>
                         </div>
-                        <div class="friend-rank-item">
-                            <div class="friend-avatar small">JD</div>
-                            <div class="friend-rank-info">
-                                <div class="friend-rank">#2</div>
-                                <div class="friend-name">John</div>
-                                <div class="friend-points">980 pts</div>
-                            </div>
+                    </div>
+                    <div class="leaderboard-item">
+                        <div class="rank-number">3</div>
+                        <div class="user-avatar">MY</div>
+                        <div class="user-info">
+                            <div class="user-name">Yasir</div>
+                            <div class="user-points">750 pts</div>
                         </div>
-                        <div class="friend-rank-item">
-                            <div class="friend-avatar small">MY</div>
-                            <div class="friend-rank-info">
-                                <div class="friend-rank">#3</div>
-                                <div class="friend-name">Yasir</div>
-                                <div class="friend-points">750 pts</div>
-                            </div>
+                    </div>
+                    <div class="leaderboard-item you">
+                        <div class="rank-number">11</div>
+                        <div class="user-avatar">SI</div>
+                        <div class="user-info">
+                            <div class="user-name">Sid (You)</div>
+                            <div class="user-points">450 pts</div>
                         </div>
                     </div>
                 </div>
