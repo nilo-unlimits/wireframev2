@@ -205,6 +205,51 @@
             font-weight: 600;
             color: #000;
         }
+        
+        .today-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            height: 32px;
+            padding: 0 12px;
+            background: #f8f8f8;
+            border: 1px solid #e5e5ea;
+            border-radius: 16px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #000;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .today-btn:hover {
+            background: #f0f0f0;
+        }
+        
+        .today-icon {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 18px;
+            height: 18px;
+        }
+        
+        .today-icon i {
+            width: 16px;
+            height: 16px;
+        }
+        
+        .red-dot {
+            position: absolute;
+            top: -2px;
+            right: -2px;
+            width: 6px;
+            height: 6px;
+            background: #FF3B30;
+            border-radius: 50%;
+            border: 1px solid #fff;
+        }
 
         .header-stats {
             display: flex;
@@ -4603,7 +4648,13 @@
     <div class="header">
         <div class="header-top">
             <div>
-                <div class="greeting">Welcome back Sid</div>
+                <button class="today-btn">
+                    <div class="today-icon">
+                        <i data-lucide="list-checks"></i>
+                        <div class="red-dot"></div>
+                    </div>
+                    <span>Today</span>
+                </button>
             </div>
             <div class="header-stats">
                 <div class="stat-item">
