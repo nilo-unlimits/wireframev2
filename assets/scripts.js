@@ -212,6 +212,40 @@ window.showPage = enhancedShowPage;
 function showCategoryAnalytics(category) {
     console.log(`Showing analytics for ${category} category`);
     
+    // Category-specific data with unique insights
+    const categoryData = {
+        work: {
+            title: 'Your Work Dreams',
+            insight: "You browsed 12 work dreams this week, most viewed on Tuesday mornings",
+            manifested: 8,
+            achieved: 4,
+            progress: 67
+        },
+        play: {
+            title: 'Your Play Dreams',
+            insight: "Adventure dreams were your top choice, with 3 new ones explored this week",
+            manifested: 3,
+            achieved: 2,
+            progress: 75
+        },
+        love: {
+            title: 'Your Love Dreams',
+            insight: "This month you searched love dreams 47 times, most on weekend mornings",
+            manifested: 5,
+            achieved: 3,
+            progress: 82
+        },
+        self: {
+            title: 'Your Self Dreams',
+            insight: "Personal growth dreams peaked on Sunday evenings - your reflection time",
+            manifested: 2,
+            achieved: 1,
+            progress: 30
+        }
+    };
+    
+    const data = categoryData[category] || categoryData.work;
+    
     // Create backdrop
     const backdrop = document.createElement('div');
     backdrop.className = 'analytics-backdrop';
@@ -223,25 +257,25 @@ function showCategoryAnalytics(category) {
     overlay.innerHTML = `
         <div class="analytics-content">
             <div class="analytics-header">
-                <div class="analytics-title">${category.charAt(0).toUpperCase() + category.slice(1)} Dreams</div>
+                <div class="analytics-title">${data.title}</div>
                 <button class="analytics-close" onclick="hideAnalytics()">×</button>
             </div>
             
             <div class="analytics-body">
                 <!-- Spotify Wrapped Style Insight -->
                 <div class="wrapped-insight">
-                    <div class="insight-text">You're most productive with ${category} dreams on Tuesdays</div>
+                    <div class="insight-text">${data.insight}</div>
                 </div>
                 
                 <!-- Manifested/Achieved Stats -->
                 <div class="achievement-stats">
                     <div class="achievement-box">
                         <div class="achievement-label">Manifested</div>
-                        <div class="achievement-value">8</div>
+                        <div class="achievement-value">${data.manifested}</div>
                     </div>
                     <div class="achievement-box">
                         <div class="achievement-label">Achieved</div>
-                        <div class="achievement-value">4</div>
+                        <div class="achievement-value">${data.achieved}</div>
                     </div>
                 </div>
                 
@@ -250,9 +284,9 @@ function showCategoryAnalytics(category) {
                     <div class="fuel-label">Overall Progress</div>
                     <div class="fuel-bar-container">
                         <div class="fuel-bar">
-                            <div class="fuel-fill" style="width: 67%"></div>
+                            <div class="fuel-fill" style="width: ${data.progress}%"></div>
                         </div>
-                        <div class="fuel-percentage">67%</div>
+                        <div class="fuel-percentage">${data.progress}%</div>
                     </div>
                 </div>
                 
