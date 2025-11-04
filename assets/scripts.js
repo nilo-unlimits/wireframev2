@@ -208,6 +208,153 @@ function basicShowPage(pageId) {
 // Set the global showPage to the enhanced version
 window.showPage = enhancedShowPage;
 
+// Analytics and Popover Functions
+function showCategoryAnalytics(category) {
+    console.log(`Showing analytics for ${category} category`);
+    
+    // Create backdrop
+    const backdrop = document.createElement('div');
+    backdrop.className = 'analytics-backdrop';
+    backdrop.onclick = () => hideAnalytics();
+    
+    // Create overlay
+    const overlay = document.createElement('div');
+    overlay.className = 'analytics-overlay';
+    overlay.innerHTML = `
+        <div class="analytics-content">
+            <div class="analytics-header">
+                <div class="analytics-title">${category.charAt(0).toUpperCase() + category.slice(1)} Dreams</div>
+                <button class="analytics-close" onclick="hideAnalytics()">×</button>
+            </div>
+            
+            <div class="analytics-body">
+                <!-- Spotify Wrapped Style Insight -->
+                <div class="wrapped-insight">
+                    <div class="insight-text">You're most productive with ${category} dreams on Tuesdays</div>
+                </div>
+                
+                <!-- Manifested/Achieved Stats -->
+                <div class="achievement-stats">
+                    <div class="achievement-box">
+                        <div class="achievement-label">Manifested</div>
+                        <div class="achievement-value">8</div>
+                    </div>
+                    <div class="achievement-box">
+                        <div class="achievement-label">Achieved</div>
+                        <div class="achievement-value">4</div>
+                    </div>
+                </div>
+                
+                <!-- Single Fuel Bar -->
+                <div class="fuel-section">
+                    <div class="fuel-label">Overall Progress</div>
+                    <div class="fuel-bar-container">
+                        <div class="fuel-bar">
+                            <div class="fuel-fill" style="width: 67%"></div>
+                        </div>
+                        <div class="fuel-percentage">67%</div>
+                    </div>
+                </div>
+                
+                <!-- Dream Button -->
+                <div class="dream-cta">
+                    <button class="dream-btn" onclick="hideAnalytics(); showPage('dreams');">Dream</button>
+                </div>
+            </div>
+        </div>
+    `;
+    
+    document.body.appendChild(backdrop);
+    document.body.appendChild(overlay);
+    
+    // Show with animation
+    requestAnimationFrame(() => {
+        backdrop.classList.add('show');
+        overlay.classList.add('show');
+    });
+}
+
+function showDayTasksPopover(day) {
+    console.log(`Showing tasks for ${day}`);
+    
+    // Create backdrop
+    const backdrop = document.createElement('div');
+    backdrop.className = 'analytics-backdrop';
+    backdrop.onclick = () => hideAnalytics();
+    
+    // Create overlay
+    const overlay = document.createElement('div');
+    overlay.className = 'analytics-overlay';
+    overlay.innerHTML = `
+        <div class="analytics-content">
+            <div class="analytics-header">
+                <div class="analytics-title">${day.charAt(0).toUpperCase() + day.slice(1)} Tasks</div>
+                <button class="analytics-close" onclick="hideAnalytics()">×</button>
+            </div>
+            <div class="analytics-body">
+                <div class="task-list">
+                    <div class="task-item completed">
+                        <input type="checkbox" class="task-checkbox" checked disabled>
+                        <div class="task-content">
+                            <div class="task-name">Morning meditation</div>
+                            <div class="task-category">Mindfulness</div>
+                        </div>
+                    </div>
+                    <div class="task-item completed">
+                        <input type="checkbox" class="task-checkbox" checked disabled>
+                        <div class="task-content">
+                            <div class="task-name">Review photography portfolio</div>
+                            <div class="task-category">Creative</div>
+                        </div>
+                    </div>
+                    <div class="task-item">
+                        <input type="checkbox" class="task-checkbox" disabled>
+                        <div class="task-content">
+                            <div class="task-name">Plan weekend goals</div>
+                            <div class="task-category">Planning</div>
+                        </div>
+                    </div>
+                    <div class="task-item">
+                        <input type="checkbox" class="task-checkbox" disabled>
+                        <div class="task-content">
+                            <div class="task-name">Call future self</div>
+                            <div class="task-category">Reflection</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+    
+    document.body.appendChild(backdrop);
+    document.body.appendChild(overlay);
+    
+    // Show with animation
+    requestAnimationFrame(() => {
+        backdrop.classList.add('show');
+        overlay.classList.add('show');
+    });
+}
+
+function hideAnalytics() {
+    const overlay = document.querySelector('.analytics-overlay');
+    const backdrop = document.querySelector('.analytics-backdrop');
+    
+    if (overlay) {
+        overlay.classList.remove('show');
+        setTimeout(() => overlay.remove(), 300);
+    }
+    if (backdrop) {
+        backdrop.classList.remove('show');
+        setTimeout(() => backdrop.remove(), 300);
+    }
+}
+
+// Legacy function name for compatibility
+function closeAnalyticsOverlay() {
+    hideAnalytics();
+}
+
 // DOM Content Loaded Event Handler
 document.addEventListener('DOMContentLoaded', async function() {
     try {
