@@ -1,7 +1,7 @@
 <!-- Bottom Navigation Component -->
 <div class="bottom-nav" id="bottomNav">
     <div class="nav-container">
-        <div class="nav-item active" onclick="showPage('home')">
+        <div class="nav-item active" onclick="showPage('explore')">
             <div class="nav-icon"><i data-lucide="compass"></i></div>
             <div class="nav-label">Explore</div>
         </div>
@@ -9,7 +9,7 @@
             <div class="nav-icon"><i data-lucide="star"></i></div>
             <div class="nav-label">Dreams</div>
         </div>
-        <div class="nav-item ai-center">
+        <div class="nav-item ai-center" onclick="showPage('future-self')">
             <div class="ai-circle">FS</div>
         </div>
         <div class="nav-item" onclick="showPage('challenges')">
@@ -25,4 +25,4 @@
 </div>
 
 <!-- Floating FS Circle -->
-<div class="floating-ai" id="floatingAI">FS</div>
+<div class="floating-ai" id="floatingAI" onclick="showPage('future-self')">FS</div>

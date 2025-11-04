@@ -1,26 +1,26 @@
-<!-- iOS Status Bar Component -->
-<div class="status-bar">
-    <div class="status-left">9:41</div>
-    <div class="status-right">
-        <div class="signal-icon"></div>
-        <div class="wifi-icon"></div>
-        <div class="battery-icon"></div>
-    </div>
-</div>
-
 <!-- Header Component -->
 <div class="header">
     <div class="header-top">
         <div>
-            <div class="greeting">Welcome back Sid</div>
+            <div class="tasks-button" onclick="showPage('tasks')">
+                <i data-lucide="calendar-check"></i>
+                <span>All Tasks</span>
+                <div class="tasks-notification-dot"></div>
+            </div>
         </div>
         <div class="header-stats">
-            <div class="stat-item">
+            <div class="stat-item" onclick="showPage('credits')" style="cursor: pointer;">
                 <span class="lightning">⚡</span>
                 <span>5.2K</span>
             </div>
-            <div class="avatar"></div>
-            <div class="menu-icon"><i data-lucide="menu"></i></div>
+            <div class="header-icons">
+                <div class="notification-icon">
+                    <i data-lucide="bell"></i>
+                    <div class="notification-dot"></div>
+                </div>
+                <div class="avatar" onclick="showPage('manage-account')" style="cursor: pointer;"></div>
+                <div class="menu-icon" onclick="openBurgerMenu()"><i data-lucide="menu"></i></div>
+            </div>
         </div>
     </div>
 </div>
