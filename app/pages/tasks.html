@@ -7,7 +7,7 @@
 <div class="tasks-controls">
     <div class="search-container">
         <div class="search-input-wrapper">
-            <input type="text" class="task-search" placeholder="Search tasks..." oninput="filterTasks()">
+            <input type="text" class="task-search" name="task-search" placeholder="Search tasks..." oninput="filterTasks()">
             <i data-lucide="search" class="search-icon"></i>
         </div>
     </div>
@@ -29,11 +29,12 @@
             <label for="detailed-task1" class="task-checkbox-label"></label>
         </div>
         <div class="task-details">
-            <div class="task-name">Morning meditation</div>
-            <div class="task-meta">
-                <div class="task-meta-left">
-                    <span class="task-category" onclick="showPage('dreams')">Master mindfulness</span>
-                </div>
+            <div class="task-row">
+                <div class="task-name">Morning meditation</div>
+                <span class="task-streak">🔥8</span>
+            </div>
+            <div class="task-row">
+                <div class="task-category" onclick="showPage('dreams')">Master mindfulness</div>
                 <span class="task-due">Today</span>
             </div>
         </div>
@@ -45,11 +46,12 @@
             <label for="detailed-task2" class="task-checkbox-label"></label>
         </div>
         <div class="task-details">
-            <div class="task-name">Review photography portfolio</div>
-            <div class="task-meta">
-                <div class="task-meta-left">
-                    <span class="task-category" onclick="showPage('dreams')">Photography potential</span>
-                </div>
+            <div class="task-row">
+                <div class="task-name">Review photography portfolio</div>
+                <span class="task-streak">🔥23</span>
+            </div>
+            <div class="task-row">
+                <div class="task-category" onclick="showPage('dreams')">Photography potential</div>
                 <span class="task-due">Today</span>
             </div>
         </div>
@@ -61,11 +63,12 @@
             <label for="detailed-task3" class="task-checkbox-label"></label>
         </div>
         <div class="task-details">
-            <div class="task-name">Plan weekend goals</div>
-            <div class="task-meta">
-                <div class="task-meta-left">
-                    <span class="task-category" onclick="showPage('challenges')">Morning routine ritual</span>
-                </div>
+            <div class="task-row">
+                <div class="task-name">Plan weekend goals</div>
+                <span class="task-streak"></span>
+            </div>
+            <div class="task-row">
+                <div class="task-category" onclick="showPage('challenges')">Morning routine ritual</div>
                 <span class="task-due">Today</span>
             </div>
         </div>
@@ -77,11 +80,12 @@
             <label for="detailed-task4" class="task-checkbox-label"></label>
         </div>
         <div class="task-details">
-            <div class="task-name">Call future self</div>
-            <div class="task-meta">
-                <div class="task-meta-left">
-                    <span class="task-category" onclick="showPage('dreams')">Photography potential</span>
-                </div>
+            <div class="task-row">
+                <div class="task-name">Call future self</div>
+                <span class="task-streak"></span>
+            </div>
+            <div class="task-row">
+                <div class="task-category" onclick="showPage('dreams')">Photography potential</div>
                 <span class="task-due">Today</span>
             </div>
         </div>
@@ -93,11 +97,12 @@
             <label for="detailed-task5" class="task-checkbox-label"></label>
         </div>
         <div class="task-details">
-            <div class="task-name">Practice street photography</div>
-            <div class="task-meta">
-                <div class="task-meta-left">
-                    <span class="task-category" onclick="showPage('dreams')">Photography potential</span>
-                </div>
+            <div class="task-row">
+                <div class="task-name">Practice street photography</div>
+                <span class="task-streak"></span>
+            </div>
+            <div class="task-row">
+                <div class="task-category" onclick="showPage('dreams')">Photography potential</div>
                 <span class="task-due">Tomorrow</span>
             </div>
         </div>
@@ -109,11 +114,12 @@
             <label for="detailed-task6" class="task-checkbox-label"></label>
         </div>
         <div class="task-details">
-            <div class="task-name">Complete 7-day mindfulness challenge</div>
-            <div class="task-meta">
-                <div class="task-meta-left">
-                    <span class="task-category" onclick="showPage('challenges')">Master mindfulness</span>
-                </div>
+            <div class="task-row">
+                <div class="task-name">Complete 7-day mindfulness challenge</div>
+                <span class="task-streak">🔥12</span>
+            </div>
+            <div class="task-row">
+                <div class="task-category" onclick="showPage('challenges')">Master mindfulness</div>
                 <span class="task-due">This Week</span>
             </div>
         </div>
@@ -125,11 +131,12 @@
             <label for="detailed-task7" class="task-checkbox-label"></label>
         </div>
         <div class="task-details">
-            <div class="task-name">Submit portfolio to gallery</div>
-            <div class="task-meta">
-                <div class="task-meta-left">
-                    <span class="task-category" onclick="showPage('dreams')">Photography potential</span>
-                </div>
+            <div class="task-row">
+                <div class="task-name">Submit portfolio to gallery</div>
+                <span class="task-streak"></span>
+            </div>
+            <div class="task-row">
+                <div class="task-category" onclick="showPage('dreams')">Photography potential</div>
                 <span class="task-due">This Week</span>
             </div>
         </div>
@@ -141,11 +148,12 @@
             <label for="detailed-task8" class="task-checkbox-label"></label>
         </div>
         <div class="task-details">
-            <div class="task-name">Design morning routine framework</div>
-            <div class="task-meta">
-                <div class="task-meta-left">
-                    <span class="task-category" onclick="showPage('challenges')">Morning routine ritual</span>
-                </div>
+            <div class="task-row">
+                <div class="task-name">Design morning routine framework</div>
+                <span class="task-streak"></span>
+            </div>
+            <div class="task-row">
+                <div class="task-category" onclick="showPage('challenges')">Morning routine ritual</div>
                 <span class="task-due">This Month</span>
             </div>
         </div>
