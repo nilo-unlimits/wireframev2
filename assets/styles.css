@@ -2699,6 +2699,94 @@ h1, h2 {
     color: #666;
 }
 
+/* Stats Cards Section */
+.stats-cards-section {
+    padding: 0 20px;
+    margin-bottom: 24px;
+}
+
+.stats-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.stat-card {
+    background: #fff;
+    border-radius: 12px;
+    border: 1px solid #e5e5ea;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.stat-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.stat-icon i {
+    width: 18px;
+    height: 18px;
+    color: #fff;
+}
+
+.stat-icon.activity {
+    background: linear-gradient(135deg, #007AFF, #005ED3);
+}
+
+.stat-icon.status {
+    background: linear-gradient(135deg, #34C759, #2BA946);
+}
+
+.stat-icon.own {
+    background: linear-gradient(135deg, #FF9500, #E6850E);
+}
+
+.stat-icon.shared {
+    background: linear-gradient(135deg, #FF6B35, #E55A2B);
+}
+
+.stat-icon.dropped {
+    background: linear-gradient(135deg, #FF3B30, #E5342A);
+}
+
+.stat-icon.logged {
+    background: linear-gradient(135deg, #5856D6, #4A49C3);
+}
+
+.stat-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.stat-number {
+    font-size: 18px;
+    font-weight: 700;
+    color: #000;
+    line-height: 1;
+    margin-bottom: 2px;
+}
+
+.stat-label {
+    font-size: 11px;
+    color: #8e8e93;
+    font-weight: 500;
+    line-height: 1;
+}
+
 /* Dream Distribution Chart - Report Page */
 .dream-chart-container {
     display: flex;
