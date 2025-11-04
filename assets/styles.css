@@ -2612,124 +2612,65 @@ h1, h2 {
 .upcoming-tasks-list {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 0;
 }
 
-.upcoming-tasks-list .task-item {
-    display: flex;
-    align-items: center;
+.upcoming-tasks-section .task-item-detailed {
+    background: transparent;
+    border-radius: 0;
+    padding: 12px 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: flex-start;
     gap: 12px;
+    border: none;
+    border-bottom: 1px solid #e5e5ea;
+    transition: transform 0.1s ease;
 }
 
-.task-rank {
-    font-size: 16px;
-    font-weight: 700;
-    color: #007AFF;
-    min-width: 40px;
+.upcoming-tasks-section .task-item-detailed:last-child {
+    border-bottom: none;
 }
 
-.task-content {
-    flex: 1;
+/* Reflection Sections */
+.reflection-section {
+    margin: 0 20px 24px 20px;
 }
 
-.task-name {
-    font-size: 14px;
+.reflection-header {
+    margin-bottom: 12px;
+}
+
+.reflection-title {
+    font-size: 8px;
     font-weight: 600;
     color: #000;
-    margin-bottom: 4px;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
-.task-meta {
-    font-size: 12px;
-    color: #8e8e93;
-    margin-bottom: 8px;
-}
-
-.task-friends {
+.reflection-cards {
     display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.friend-avatars-stack {
-    display: flex;
-    align-items: center;
-}
-
-.friend-avatar {
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    background: #e5e5ea;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 10px;
-    font-weight: 600;
-    color: #666;
-    margin-left: -8px;
-    border: 2px solid #fff;
-}
-
-.friend-avatar:first-child {
-    margin-left: 0;
-}
-
-.friend-avatar.count {
-    background: #f0f0f0;
-}
-
-.add-friend-btn {
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    background: none;
-    border: 1px dashed #e5e5ea;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 12px;
-    color: #8e8e93;
-    cursor: pointer;
-    transition: all 0.2s ease;
-}
-
-.add-friend-btn:hover {
-    border-color: #d1d1d6;
-    color: #666;
-}
-
-/* Stats Cards Section */
-.stats-cards-section {
-    padding: 0 20px;
-    margin-bottom: 24px;
-}
-
-.stats-cards-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    flex-direction: column;
     gap: 12px;
 }
 
-.stat-card {
+.reflection-card {
     background: #fff;
     border-radius: 12px;
     border: 1px solid #e5e5ea;
     padding: 16px;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 12px;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.stat-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.stat-icon {
-    width: 36px;
-    height: 36px;
+.reflection-icon {
+    width: 32px;
+    height: 32px;
+    background: #666;
     border-radius: 8px;
     display: flex;
     align-items: center;
@@ -2737,54 +2678,39 @@ h1, h2 {
     flex-shrink: 0;
 }
 
-.stat-icon i {
-    width: 18px;
-    height: 18px;
+.reflection-icon i {
+    width: 16px;
+    height: 16px;
     color: #fff;
 }
 
-.stat-icon.activity {
-    background: linear-gradient(135deg, #007AFF, #005ED3);
-}
-
-.stat-icon.status {
-    background: linear-gradient(135deg, #34C759, #2BA946);
-}
-
-.stat-icon.own {
-    background: linear-gradient(135deg, #FF9500, #E6850E);
-}
-
-.stat-icon.shared {
-    background: linear-gradient(135deg, #FF6B35, #E55A2B);
-}
-
-.stat-icon.dropped {
-    background: linear-gradient(135deg, #FF3B30, #E5342A);
-}
-
-.stat-icon.logged {
-    background: linear-gradient(135deg, #5856D6, #4A49C3);
-}
-
-.stat-content {
+.reflection-content {
     flex: 1;
     min-width: 0;
 }
 
-.stat-number {
-    font-size: 18px;
-    font-weight: 700;
-    color: #000;
-    line-height: 1;
-    margin-bottom: 2px;
-}
-
-.stat-label {
-    font-size: 11px;
+.reflection-label {
+    font-size: 8px;
     color: #8e8e93;
     font-weight: 500;
-    line-height: 1;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.reflection-headline {
+    font-size: 8px;
+    font-weight: 600;
+    color: #000;
+    line-height: 1.2;
+    margin-bottom: 4px;
+}
+
+.reflection-microcopy {
+    font-size: 8px;
+    color: #666;
+    line-height: 1.3;
+    font-weight: 400;
 }
 
 /* Dream Distribution Chart - Report Page */

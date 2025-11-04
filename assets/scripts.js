@@ -764,3 +764,35 @@ window.toggleDateFilter = toggleDateFilter;
 window.selectPeriod = selectPeriod;
 window.selectCustomDate = selectCustomDate;
 window.applyCustomDate = applyCustomDate;
+
+// Format task due dates
+function formatTaskDueDate(date) {
+    const today = new Date();
+    const taskDate = new Date(date);
+    const yesterday = new Date(today);
+    yesterday.setDate(today.getDate() - 1);
+    const tomorrow = new Date(today);
+    tomorrow.setDate(today.getDate() + 1);
+    
+    // Remove time for comparison
+    const todayStr = today.toDateString();
+    const yesterdayStr = yesterday.toDateString();
+    const tomorrowStr = tomorrow.toDateString();
+    const taskStr = taskDate.toDateString();
+    
+    if (taskStr === todayStr) {
+        return 'Today';
+    } else if (taskStr === yesterdayStr) {
+        return 'Yesterday';
+    } else if (taskStr === tomorrowStr) {
+        return 'Tomorrow';
+    } else {
+        // Format as "1 Jan"
+        return taskDate.toLocaleDateString('en-US', { 
+            day: 'numeric', 
+            month: 'short' 
+        });
+    }
+}
+
+window.formatTaskDueDate = formatTaskDueDate;
