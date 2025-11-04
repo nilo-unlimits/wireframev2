@@ -153,6 +153,8 @@ function enhancedShowPage(pageId) {
                 loadComponent('breadcrumb', 'dream-report-breadcrumb-container').then(() => {
                     updateBreadcrumbTitle(pageId);
                     initializeLucideIcons();
+                    // Initialize carousel when dream report page loads
+                    setTimeout(initAutoMessageCarousel, 100);
                 });
             }
         });
@@ -165,7 +167,10 @@ function enhancedShowPage(pageId) {
         
         // Handle dream-report page specifically 
         if (pageId === 'dream-report') {
-            setTimeout(() => updateBreadcrumbTitle(pageId), 100);
+            setTimeout(() => {
+                updateBreadcrumbTitle(pageId);
+                initAutoMessageCarousel();
+            }, 100);
         }
     }
     
@@ -796,3 +801,71 @@ function formatTaskDueDate(date) {
 }
 
 window.formatTaskDueDate = formatTaskDueDate;
+
+// Auto Message Carousel
+function initAutoMessageCarousel() {
+    const carousel = document.querySelector('.auto-message-carousel');
+    if (!carousel) return;
+    
+    const messages = carousel.querySelectorAll('.auto-message');
+    const dots = carousel.querySelectorAll('.dot');
+    if (messages.length === 0) return;
+    
+    let currentIndex = 0;
+    
+    function updateDots() {
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentIndex);
+        });
+    }
+    
+    function showNextMessage() {
+        // Add exit class to current message
+        messages[currentIndex].classList.add('exit');
+        messages[currentIndex].classList.remove('active');
+        
+        // Move to next message
+        currentIndex = (currentIndex + 1) % messages.length;
+        
+        // After exit animation, show next message
+        setTimeout(() => {
+            // Remove exit class from all messages
+            messages.forEach(msg => msg.classList.remove('exit'));
+            
+            // Show next message
+            messages[currentIndex].classList.add('active');
+            updateDots();
+        }, 400);
+    }
+    
+    // Add click handlers to dots
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            if (index === currentIndex) return;
+            
+            messages[currentIndex].classList.add('exit');
+            messages[currentIndex].classList.remove('active');
+            
+            currentIndex = index;
+            
+            setTimeout(() => {
+                messages.forEach(msg => msg.classList.remove('exit'));
+                messages[currentIndex].classList.add('active');
+                updateDots();
+            }, 400);
+        });
+    });
+    
+    // Start cycling after initial display
+    setTimeout(() => {
+        setInterval(showNextMessage, 4000); // 4 seconds per message
+    }, 3000); // Start after 3 seconds
+}
+
+// Initialize auto carousel when page loads
+document.addEventListener('DOMContentLoaded', () => {
+    // Add a small delay to ensure DOM is fully rendered
+    setTimeout(initAutoMessageCarousel, 100);
+});
+
+window.initAutoMessageCarousel = initAutoMessageCarousel;

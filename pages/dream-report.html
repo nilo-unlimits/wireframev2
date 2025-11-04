@@ -17,6 +17,28 @@
     </div>
 </div>
 
+<!-- Auto Message Carousel -->
+<div class="auto-message-carousel" id="auto-message-carousel">
+    <div class="auto-message active" data-message="0">
+        <div class="auto-message-headline">You're focused on what matters.</div>
+        <div class="auto-message-subtitle">You've let go of 1 dream that no longer fits who you're becoming.</div>
+    </div>
+    <div class="auto-message" data-message="1">
+        <div class="auto-message-headline">You're building momentum.</div>
+        <div class="auto-message-subtitle">Your consistency is growing stronger across all areas of life.</div>
+    </div>
+    <div class="auto-message" data-message="2">
+        <div class="auto-message-headline">Your world is expanding.</div>
+        <div class="auto-message-subtitle">2 of your dreams are now shared — connection fuels clarity.</div>
+    </div>
+    <div class="carousel-dots">
+        <div class="dot active" data-dot="0"></div>
+        <div class="dot" data-dot="1"></div>
+        <div class="dot" data-dot="2"></div>
+    </div>
+</div>
+
+
 
 <!-- Dream Health Weekly View -->
 <div class="dream-health-section">
@@ -129,6 +151,78 @@
                     <div class="legend-count"><strong>0</strong></div>
                 </div>
                 <div class="legend-arrow"><i data-lucide="chevron-right"></i></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Dreams Dashboard -->
+<div class="dreams-dashboard">
+    <div class="dashboard-cards">
+        <div class="dashboard-card">
+            <div class="dashboard-number">14</div>
+            <div class="dashboard-label">Your Dreams</div>
+        </div>
+        <div class="dashboard-card">
+            <div class="dashboard-number">8</div>
+            <div class="dashboard-label">Shared Dreams</div>
+        </div>
+    </div>
+</div>
+
+<!-- Challenge Categories Distribution -->
+<div class="dream-health-section">
+    <div class="health-header">
+        <div class="standard-title">Your Challenges</div>
+    </div>
+    <div class="dream-chart-container">
+        <div class="donut-container">
+            <svg width="140" height="140" viewBox="0 0 140 140">
+                <!-- Starter segment (3 challenges - ~50%) -->
+                <circle cx="70" cy="70" r="50" fill="none" stroke="#f0f0f0" stroke-width="12"/>
+                <circle cx="70" cy="70" r="50" fill="none" stroke="#34C759" stroke-width="12" 
+                        stroke-dasharray="314.16" stroke-dashoffset="157" 
+                        stroke-linecap="round" transform="rotate(-90 70 70)"/>
+                
+                <!-- Warrior segment (2 challenges - ~33%) -->
+                <circle cx="70" cy="70" r="50" fill="none" stroke="#FF9500" stroke-width="12" 
+                        stroke-dasharray="314.16" stroke-dashoffset="210" 
+                        stroke-linecap="round" transform="rotate(90 70 70)"/>
+                
+                <!-- Unlimiter segment (1 challenge - ~17%) -->
+                <circle cx="70" cy="70" r="50" fill="none" stroke="#FF3B30" stroke-width="12" 
+                        stroke-dasharray="314.16" stroke-dashoffset="261" 
+                        stroke-linecap="round" transform="rotate(210 70 70)"/>
+            </svg>
+            <div class="donut-center">
+                <div class="donut-total">6</div>
+                <div class="donut-label">Total Challenges</div>
+            </div>
+        </div>
+        <div class="donut-legend">
+            <div class="legend-item">
+                <div class="legend-color starter"></div>
+                <div class="legend-text">
+                    <div class="legend-name">Starter</div>
+                    <div class="legend-days">21 days</div>
+                    <div class="legend-count"><strong>3</strong></div>
+                </div>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color warrior"></div>
+                <div class="legend-text">
+                    <div class="legend-name">Warrior</div>
+                    <div class="legend-days">60 days</div>
+                    <div class="legend-count"><strong>2</strong></div>
+                </div>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color unlimiter"></div>
+                <div class="legend-text">
+                    <div class="legend-name">Unlimiter</div>
+                    <div class="legend-days">100 days</div>
+                    <div class="legend-count"><strong>1</strong></div>
+                </div>
             </div>
         </div>
     </div>
